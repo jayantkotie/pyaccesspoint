@@ -108,7 +108,7 @@ def save_config(config_path, config_json):
     return True
 
 
-def create_config_json(wlan='wlan0', inet=None, ip='192.168.45.1', netmask='255.255.255.0', ssid='MyAccessPoint',
+def create_config_json(wlan='wlo1', inet=None, ip='192.168.45.1', netmask='255.255.255.0', ssid='MyAccessPoint',
                        password='1234567890'):
     return {'wlan': wlan, 'inet': inet, 'ip': ip, 'netmask': netmask, 'ssid': ssid, 'password': password}
 
@@ -121,7 +121,7 @@ def main():
     parser.add_argument('-c', "--config", required=False, action='store_true', help='use config file')
     parser.add_argument('-cp', "--config_path", required=False, default='/etc/accesspoint/accesspoint.json',
                         help='path to config file')
-    parser.add_argument('-w', "--wlan", required=False, default='wlan0',
+    parser.add_argument('-w', "--wlo", required=False, default='wlo1',
                         help='wi-fi interface that will be used to create hotspot')
     parser.add_argument('-i', "--inet", required=False, default=None, help='forwarding interface')
     parser.add_argument('-ip', required=False, default='192.168.45.1', help='ip address of this machine in new '
